@@ -1,0 +1,152 @@
+:root {
+  --navy: #192d50;
+  --navy-light: #273f63;
+  --shadow-blue: #516f8b;
+  --paper: #fffffd;
+  --muted: #5b6b82;
+  --line: #d9e0ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--navy);
+  background: var(--paper);
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--shadow-blue);
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 20px max(24px, calc((100% - 960px) / 2 + 24px));
+  background: var(--navy);
+  color: var(--paper);
+}
+
+.name {
+  color: var(--paper);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: var(--paper);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  max-width: 1204px;
+  height: auto;
+}
+
+.hero-caption {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.intro {
+  padding-top: 40px;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.lede {
+  max-width: 640px;
+  margin: 0;
+  font-size: 19px;
+}
+
+.section {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.section p {
+  max-width: 640px;
+  margin: 0;
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.site-footer {
+  margin-top: 64px;
+  padding: 24px max(24px, calc((100% - 960px) / 2 + 24px)) 32px;
+  background: var(--navy);
+  color: var(--paper);
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .lede {
+    font-size: 17px;
+  }
+}

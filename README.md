@@ -13,32 +13,6 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000>.
 
-## Add a Google Calendar
-
-The Gigs section in `index.html` currently links to the band's Linktree. To show gig
-dates directly on the site:
-
-1. In Google Calendar on a computer, open **Settings** (the gear icon), then choose
-   **Add calendar** > **Create new calendar**. A separate calendar keeps personal
-   events out of the public gig listing.
-2. Add the band's public gigs to that calendar, including the date, time, venue, and
-   any ticket link in the event description.
-3. In Settings, select the new calendar under **Settings for my calendars**. Under
-   **Access permissions for events**, enable **Make available to public**. Only do
-   this for the dedicated gigs calendar: its events will be visible to anyone.
-4. On that calendar's settings page, find **Integrate calendar** and copy the
-   provided iframe embed code. If desired, adjust the calendar's appearance and
-   display options before copying it.
-5. In `index.html`, find the `<section>` with `id="gigs"`. Replace its existing
-   paragraph with the copied `<iframe>...</iframe>` code. Add a descriptive `title`
-   and `loading="lazy"` to the iframe if Google has not included them.
-6. Run the site locally using the command above and check that the calendar loads
-   and shows only the intended public events. Then deploy the updated site.
-
-If the Google account is managed by an organisation, its administrator may prevent
-public calendar sharing. In that case, ask the administrator or keep using the
-Linktree link.
-
 ## Items to confirm before launch
 
 Owner: **Dev** means a code or hosting change. **Marketing** means band-side content
@@ -65,3 +39,20 @@ or design sign-off.
    should stay on one scrolling page, or whether separate pages (for example Players,
    Gigs or Contact) are wanted. The players page is already separate. Dev then makes
    any remaining split.
+7. **Booking form (Dev, with Marketing to confirm the inbox):** the site is static, so
+   it can't send email on its own. Choose a form service and wire it into the Bookings
+   section of `index.html`. Options: Web3Forms (free, needs an access key emailed to
+   the band's address), Formspree (free tier, needs an account and form ID), or a plain
+   `mailto:` link (no sign-up, but opens the visitor's email app). Until then, the
+   **Book us** button and the Bookings email address still work.
+8. **Open review items (Dev, with Marketing for the dates):** check these before launch.
+   - Check the layout in a browser on phone and desktop widths, including the venue
+     and gig boxes, since the last changes were not viewed in a browser.
+   - Replace the missing hero image (`95328e6d-…jpg`), which was deleted, and confirm
+     the slideshow doesn't include the main photo.
+   - Confirm the past gig dates: Freight Island (house band, November and December
+     2024, 2025 and 2026), Band on the Wall (10 January 2025 and 18 April 2026), and
+     Academy 3 (11 November 2025). Confirm the Old Abbey Taphouse date (4 October 2024).
+   - Replace the two **Date TBC** placeholders in the gig list with real gigs and
+     ticket links.
+   - Confirm the Old Abbey Taphouse website link, which came from a third-party listing.

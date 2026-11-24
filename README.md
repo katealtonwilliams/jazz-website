@@ -38,3 +38,30 @@ dates directly on the site:
 If the Google account is managed by an organisation, its administrator may prevent
 public calendar sharing. In that case, ask the administrator or keep using the
 Linktree link.
+
+## Items to confirm before launch
+
+Owner: **Dev** means a code or hosting change. **Marketing** means band-side content
+or design sign-off.
+
+1. **Content (Marketing):** confirm the bio text, the players list, the past gigs
+   (including The Old Abbey Taphouse, 4 October 2024), the enquiries email
+   (`tannerandthetones@gmail.com` or `team@tannerandthetones.co.uk`), and the company
+   name in the footer (Tones Music Ltd). Check the wording of the contact page, which
+   could not be read.
+2. **Colour scheme (Marketing):** confirm the terracotta, cream and black palette
+   matches the poster. Dev can then adjust the values in `:root` in `styles.css`.
+3. **Pictures (Marketing, with Dev for the file work):** confirm the photo captions and
+   alt text match each photo. Confirm the player photos to add to `players.html`.
+   Dev can compress `IMG_1140.JPG`, which is 3.7 MB.
+4. **How to host (Dev):** confirm GitHub Pages is the choice, enable it in the repo
+   settings, and decide whether to use a custom domain such as
+   `tannerandthetones.co.uk`. Dev makes the DNS change, which will replace the current
+   WordPress site on that domain.
+5. **Integrating Google Calendar (Dev, with Marketing for the events):** Marketing
+   creates and maintains the gig events and the public calendar. Dev then pastes the
+   iframe embed into the Gigs section, following the steps above.
+6. **Pages vs everything on the front page (Marketing):** decide whether the site
+   should stay on one scrolling page, or whether separate pages (for example Players,
+   Gigs or Contact) are wanted. The players page is already separate. Dev then makes
+   any remaining split.
